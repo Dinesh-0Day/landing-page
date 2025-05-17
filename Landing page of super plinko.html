@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Our Telegram Channel</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      overflow: hidden;
+    }
+    .ball {
+      position: absolute;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #00ffff;
+      border-radius: 50%;
+      opacity: 0;
+      animation: fall linear infinite;
+      animation-fill-mode: both;
+    }
+    @keyframes fall {
+      0% {
+        opacity: 1;
+        transform: translateY(-100px) translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh) translateX(0);
+      }
+    }
+    .money {
+      position: absolute;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background: radial-gradient(circle at 30% 30%, #fff700 70%, #ffd700 100%);
+      border-radius: 50%;
+      border: 2px solid #e6b800;
+      opacity: 0;
+      animation: fall-money linear infinite;
+      animation-fill-mode: both;
+      z-index: 1;
+    }
+    @keyframes fall-money {
+      0% {
+        opacity: 1;
+        transform: translateY(-120px) scale(1.1) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh) scale(1) rotate(360deg);
+      }
+    }
+    
+    .money-note {
+      position: absolute;
+      top: 0;
+      width: 32px;
+      height: 18px;
+      background: linear-gradient(135deg, #b6fcb6 60%, #34d399 100%);
+      border: 2px solid #059669;
+      border-radius: 4px;
+      opacity: 0;
+      animation: fall-note linear infinite;
+      animation-fill-mode: both;
+      z-index: 1;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+    }
+    .money-note::after {
+      content: "\20B9";
+      color: #059669;
+      font-weight: bold;
+      font-size: 1rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes fall-note {
+      0% {
+        opacity: 1;
+        transform: translateY(-120px) rotate(-10deg) scale(1.1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(20deg) scale(1);
+      }
+    }
+
+    .star {
+      position: absolute;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: none;
+      opacity: 0;
+      animation: fall-star linear infinite;
+      animation-fill-mode: both;
+      z-index: 1;
+    }
+    .star svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    @keyframes fall-star {
+      0% {
+        opacity: 1;
+        transform: translateY(-120px) scale(1.2) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh) scale(1) rotate(180deg);
+      }
+    }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '715180987556782');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen flex items-center justify-center relative">
+
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=715180987556782&ev=PageView&noscript=1"
+  /></noscript>
+
+  <!-- Animated falling balls -->
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const ball = document.createElement("div");
+      ball.classList.add("ball");
+      ball.style.left = Math.random() * 100 + "vw";
+      ball.style.animationDuration = 2 + Math.random() * 3 + "s";
+      ball.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(ball);
+    }
+    // Animated falling money notes
+    for (let i = 0; i < 12; i++) {
+      const note = document.createElement("div");
+      note.classList.add("money-note");
+      note.style.left = Math.random() * 100 + "vw";
+      note.style.animationDuration = 2.5 + Math.random() * 2.5 + "s";
+      note.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(note);
+    }
+
+    // Animated falling stars
+    for (let i = 0; i < 18; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.animationDuration = 2 + Math.random() * 3 + "s";
+      star.style.animationDelay = Math.random() * 5 + "s";
+      // Add SVG star shape
+      star.innerHTML = `<svg viewBox="0 0 24 24" fill="#ffe066"><polygon points="12,2 15,9 22,9.5 17,14.5 18.5,22 12,18 5.5,22 7,14.5 2,9.5 9,9"/></svg>`;
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <div class="bg-gray-900 border border-gray-700 p-8 rounded-2xl shadow-2xl max-w-md w-full text-center z-10 relative">
+    
+    <!-- Your Logo -->
+    <img src="https://i.postimg.cc/TY0W8qRS/logo-transparent-12.png" alt="Your Logo" class="w-48 mx-auto mb-6">
+
+    <h1 class="text-3xl font-extrabold text-white mb-3">Join Our Telegram Channel</h1>
+    <p class="text-gray-400 mb-6">Get the latest prediction, promo codes, and bonus. Tap the button below to join now!</p>
+
+    <a href="https://t.me/bestsuper_plinko2" target="_blank"
+       class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+      🚀 Join Now
+    </a>
+
+  </div>
+</body>
+</html>
